@@ -52,12 +52,14 @@ public class KeywordsDetector {
                 lowerCaseKeywords[i] = lowerCaseKeyword;
             }
             // If a sentence contains one or more of the kewords, prints it.
-            for (int i = 0; i < lowerCaseKeywords.length; i++) {
-                for (int j = 0; j < lowerCaseSentences.length; j++) {
-                    if (lowerCaseSentences[j].indexOf(lowerCaseKeywords[i]) != -1) {
-                        System.out.println(sentences[j]);
+            for (int i = 0; i < lowerCaseSentences.length; i++) {
+                for (int j = 0; j < lowerCaseKeywords.length; j++) {
+                    if (lowerCaseSentences[i].indexOf(lowerCaseKeywords[j]) != -1) {
+                        System.out.println(sentences[i]);
+                        break;
                     }
                 }
+
             }
 
         }
